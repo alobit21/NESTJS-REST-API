@@ -1,0 +1,21 @@
+mac@mac:~$ docker start project-dev-db-1
+project-dev-db-1
+mac@mac:~$ docker ps 
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS         PORTS                                         NAMES
+b9ab2b569ed6   postgres:14   "docker-entrypoint.s…"   23 hours ago   Up 6 seconds   0.0.0.0:5434->5432/tcp, [::]:5434->5432/tcp   project-dev-db-1
+mac@mac:~$ psql -h localhost -p 5434 -U postgres -d nest
+Password for user postgres: 
+psql (17.5 (Ubuntu 17.5-1.pgdg22.04+1), server 14.18 (Debian 14.18-1.pgdg120+1))
+Type "help" for help.
+
+nest=# 
+
+
+//Authentication
+
+npm install --save @nestjs/passport passport @nestjs/jwt passport-jwt
+
+
+npm install -D @types/passport-jwt
+
+
